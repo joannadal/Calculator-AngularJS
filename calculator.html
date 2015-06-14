@@ -21,45 +21,45 @@
 
             <div class="col-md-10 col-xs-10">
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(1)">1</button>
+                    <button class="btn btn-primary number" id="number1" ng-click="addNumber(1)">1</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(2)">2</button>
+                    <button class="btn btn-primary number" id="number2" ng-click="addNumber(2)">2</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(3)">3</button>
+                    <button class="btn btn-primary number" id="number3" ng-click="addNumber(3)">3</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" ng-click="onClickSum()">+</button>
+                <button class="btn btn-default number" id="sum" ng-click="onClickSum()">+</button>
             </div>
             <div class="col-md-10 col-xs-10">
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(4)">4</button>
+                    <button class="btn btn-primary number" id="number4" ng-click="addNumber(4)">4</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(5)">5</button>
+                    <button class="btn btn-primary number" id="number5" ng-click="addNumber(5)">5</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(6)">6</button>
+                    <button class="btn btn-primary number" id="number6" ng-click="addNumber(6)">6</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" ng-click="onClickSubtract()">-</button>
+                <button class="btn btn-default number" id="substract" ng-click="onClickSubtract()">-</button>
             </div>
             <div class="col-md-10 col-xs-10">
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(7)">7</button>
+                    <button class="btn btn-primary number" id="number7" ng-click="addNumber(7)">7</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(8)">8</button>
+                    <button class="btn btn-primary number" id="number8" ng-click="addNumber(8)">8</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" ng-click="addNumber(9)">9</button>
+                    <button class="btn btn-primary number" id="number9" ng-click="addNumber(9)">9</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" ng-click="onClickMultiply()">x</button>
+                <button class="btn btn-default number" id="multiply" ng-click="onClickMultiply()">x</button>
             </div>
             <div class="col-md-6 col-xs-6">
                 <div class="col-md-12 col-xs-12">
@@ -73,16 +73,77 @@
                     <button class="btn btn-default number" ng-click="onClickClear()">C</button>
                 </div>
                 <div class="col-md-6 col-xs-6">
-                    <button class="btn btn-default number" ng-click="onClickCalculate()">=</button>
+                    <button class="btn btn-default number" id="result" ng-click="onClickCalculate()">=</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" ng-click="onClickDivide()">/</button>
+                <button class="btn btn-default number" id="divide" ng-click="onClickDivide()">/</button>
             </div>
 
         </div>
 
         <script src="js/calculator.js"></script>
+
+        <script type="text/javascript">
+            $(document).keypress(function(e) {
+                //Number 1
+                if(e.which == 49) {
+                    $( "#number1" ).trigger( "click" );
+                }
+                //Number 2
+                if(e.which == 50) {
+                    $( "#number2" ).trigger( "click" );
+                }
+                //Number 3
+                if(e.which == 51) {
+                    $( "#number3" ).trigger( "click" );
+                }
+                //Number 4
+                if(e.which == 52) {
+                    $( "#number4" ).trigger( "click" );
+                }
+                //Number 5
+                if(e.which == 53) {
+                    $( "#number5" ).trigger( "click" );
+                }
+                //Number 6
+                if(e.which == 54) {
+                    $( "#number6" ).trigger( "click" );
+                }
+                //Number 7
+                if(e.which == 55) {
+                    $( "#number7" ).trigger( "click" );
+                }
+                //Number 8
+                if(e.which == 56) {
+                    $( "#number8" ).trigger( "click" );
+                }
+                //Number 9
+                if(e.which == 57) {
+                    $( "#number9" ).trigger( "click" );
+                }
+                //Symbol +
+                if(e.which == 43) {
+                    $( "#sum" ).trigger( "click" );
+                }
+                //Symbol -
+                if(e.which == 45) {
+                    $( "#substract" ).trigger( "click" );
+                }
+                //Symbol *
+                if(e.which == 42) {
+                    $( "#multiply" ).trigger( "click" );
+                }
+                //Symbol /
+                if(e.which == 47) {
+                    $( "#divide" ).trigger( "click" );
+                }
+                //Symbol =
+                if(e.which == 13) {
+                    $( "#result" ).trigger( "click" );
+                }
+            });
+        </script>
 
     </body>
 
