@@ -19,19 +19,44 @@
 
         <div class="content" ng-controller="CalculatorController">
 
+            <div class="col-md-12 col-xs-12">
+                <div class="col-md-12 col-xs-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control number text-right" readonly="True" value="{{ displayValue }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="col-md-3 col-xs-3">
+                    <button class="btn btn-default number" id="changeSign" ng-click="onClickChangeSign()">+/-</button>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <button class="btn btn-default number" id="percentage" ng-click="onClickPercentage()">%</button>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <button class="btn btn-default number" id="memorySave" ng-click="onClickSaveMemory()">MS</button>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <button class="btn btn-default number" id="memoryRead" ng-click="onClickReadMemory()">MR</button>
+                </div>
+            </div>
+
             <div class="col-md-10 col-xs-10">
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" id="number1" ng-click="addNumber(1)">1</button>
+                    <button class="btn btn-primary number" id="number7" ng-click="addNumber(7)">7</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" id="number2" ng-click="addNumber(2)">2</button>
+                    <button class="btn btn-primary number" id="number8" ng-click="addNumber(8)">8</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" id="number3" ng-click="addNumber(3)">3</button>
+                    <button class="btn btn-primary number" id="number9" ng-click="addNumber(9)">9</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" id="sum" ng-click="onClickSum()">+</button>
+                <div class="col-md-12 col-xs-12">
+                    <button class="btn btn-default number" id="sum" ng-click="onClickSum()">+</button>
+                </div>
             </div>
             <div class="col-md-10 col-xs-10">
                 <div class="col-md-4 col-xs-4">
@@ -45,39 +70,46 @@
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" id="substract" ng-click="onClickSubtract()">-</button>
+                <div class="col-md-12 col-xs-12">
+                    <button class="btn btn-default number" id="substract" ng-click="onClickSubtract()">-</button>
+                </div>
             </div>
             <div class="col-md-10 col-xs-10">
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" id="number7" ng-click="addNumber(7)">7</button>
+                    <button class="btn btn-primary number" id="number1" ng-click="addNumber(1)">1</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" id="number8" ng-click="addNumber(8)">8</button>
+                    <button class="btn btn-primary number" id="number2" ng-click="addNumber(2)">2</button>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <button class="btn btn-primary number" id="number9" ng-click="addNumber(9)">9</button>
+                    <button class="btn btn-primary number" id="number3" ng-click="addNumber(3)">3</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" id="multiply" ng-click="onClickMultiply()">x</button>
-            </div>
-            <div class="col-md-6 col-xs-6">
                 <div class="col-md-12 col-xs-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control number" readonly="True" value="{{ displayValue }}">
-                    </div>
+                    <button class="btn btn-default number" id="multiply" ng-click="onClickMultiply()">x</button>
                 </div>
             </div>
-            <div class="col-md-4 col-xs-4">
-                <div class="col-md-6 col-xs-6">
-                    <button class="btn btn-default number" ng-click="onClickClear()">C</button>
+            <div class="col-md-5 col-xs-5">
+                <div class="col-md-12 col-xs-12">
+                    <button class="btn btn-primary number" id="number0" ng-click="addNumber(0)">0</button>
                 </div>
-                <div class="col-md-6 col-xs-6">
+            </div>
+            <div class="col-md-5 col-xs-5">
+                <div class="col-md-2 col-xs-2">
+                    <button class="btn btn-default number" ng-click="addNumber('.')">.</button>
+                </div>
+                <div class="col-md-5 col-xs-5">
+                    <button class="btn btn-default number" ng-click="onClickClear()">AC</button>
+                </div>
+                <div class="col-md-5 col-xs-5">
                     <button class="btn btn-default number" id="result" ng-click="onClickCalculate()">=</button>
                 </div>
             </div>
             <div class="col-md-2 col-xs-2">
-                <button class="btn btn-default number" id="divide" ng-click="onClickDivide()">/</button>
+                <div class="col-md-12 col-xs-12">
+                    <button class="btn btn-default number" id="divide" ng-click="onClickDivide()">/</button>
+                </div>
             </div>
 
         </div>
