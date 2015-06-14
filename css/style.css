@@ -1,6 +1,14 @@
+body {
+    font-family: SanFranciscoTextRegular;
+}
+
+.title {
+    font-family: SanFranciscoTextHeavy;
+}
+
 .number {
     font-size: 30px;
-    font-weight: bold;
+    font-family: SanFranciscoTextBold;
     height: 55px;
     margin-top: 15px;
     width: 100%;
