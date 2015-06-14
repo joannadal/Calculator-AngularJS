@@ -1,2 +1,2 @@
 # Calculator-AngularJS
-Calculator using AngularJS
+Basic calculator created using AngularJS and Bootstrap.
