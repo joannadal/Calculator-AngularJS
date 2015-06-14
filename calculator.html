@@ -97,7 +97,7 @@
             </div>
             <div class="col-md-5 col-xs-5">
                 <div class="col-md-2 col-xs-2">
-                    <button class="btn btn-default number" ng-click="addNumber('.')">.</button>
+                    <button class="btn btn-default number" id="dot" ng-click="addNumber('.')">.</button>
                 </div>
                 <div class="col-md-5 col-xs-5">
                     <button class="btn btn-default number" ng-click="onClickClear()">AC</button>
@@ -118,6 +118,10 @@
 
         <script type="text/javascript">
             $(document).keypress(function(e) {
+                //Number 0
+                if(e.which == 48) {
+                    $( "#number0" ).trigger( "click" );
+                }
                 //Number 1
                 if(e.which == 49) {
                     $( "#number1" ).trigger( "click" );
@@ -154,6 +158,10 @@
                 if(e.which == 57) {
                     $( "#number9" ).trigger( "click" );
                 }
+                //Symbol .
+                if(e.which == 46) {
+                    $( "#dot" ).trigger( "click" );
+                }
                 //Symbol +
                 if(e.which == 43) {
                     $( "#sum" ).trigger( "click" );
@@ -173,6 +181,10 @@
                 //Symbol =
                 if(e.which == 13) {
                     $( "#result" ).trigger( "click" );
+                }
+                //Symbol %
+                if(e.which == 37) {
+                    $( "#percentage" ).trigger( "click" );
                 }
             });
         </script>
