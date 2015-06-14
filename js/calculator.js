@@ -56,8 +56,10 @@ angular.module("Calculator", []).controller("CalculatorController",
             }
 
             $scope.operation = null;
-            $scope.memory = $scope.result;
-            $scope.displayValue = $scope.result;
+            if ($scope.result != 0)
+                $scope.memory = $scope.result;
+            if ($scope.result != 0)
+                $scope.displayValue = $scope.result;
         };
     }
 );
