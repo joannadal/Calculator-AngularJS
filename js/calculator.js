@@ -6,8 +6,9 @@ angular.module("Calculator", []).controller("CalculatorController",
         $scope.operation = null;
 
         $scope.addNumber = function(newNumber) {
-            if ($scope.displayValue.length < 18)
+            if ($scope.displayValue.length < 18) {
                 $scope.displayValue += String(newNumber);
+            }
         }
 
         $scope.saveInMemory = function() {
@@ -56,10 +57,12 @@ angular.module("Calculator", []).controller("CalculatorController",
             }
 
             $scope.operation = null;
-            if ($scope.result != 0)
+            if ($scope.result != 0) {
                 $scope.memory = $scope.result;
-            if ($scope.result != 0)
+            }
+            if ($scope.result != 0) {
                 $scope.displayValue = $scope.result;
+            }
         };
     }
 );
