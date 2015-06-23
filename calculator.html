@@ -26,6 +26,9 @@
                         <input type="text" class="form-control number text-right" readonly="True" value="{{ displayValue }}">
                     </div>
                 </div>
+                <div class="col-md-12 col-xs-12 text-right">
+                    <span class="operation">{{ operation }}</span>
+                </div>
             </div>
 
             <div class="col-md-12 col-xs-12">
@@ -88,7 +91,7 @@
             </div>
             <div class="col-md-2 col-xs-2">
                 <div class="col-md-12 col-xs-12">
-                    <button class="btn btn-default number" id="multiply" ng-click="onClickMultiply()">x</button>
+                    <button class="btn btn-default number" id="multiply" ng-click="onClickMultiply()">*</button>
                 </div>
             </div>
             <div class="col-md-5 col-xs-5">
@@ -97,13 +100,16 @@
                 </div>
             </div>
             <div class="col-md-5 col-xs-5">
-                <div class="col-md-2 col-xs-2">
+                <div class="col-md-3 col-xs-3">
                     <button class="btn btn-default number" id="dot" ng-click="addNumber('.')">.</button>
                 </div>
-                <div class="col-md-5 col-xs-5">
-                    <button class="btn btn-default number" ng-click="onClickClear()">AC</button>
+                <div class="col-md-3 col-xs-3">
+                    <button class="btn btn-default number" ng-click="onClickReset()">AC</button>
                 </div>
-                <div class="col-md-5 col-xs-5">
+                <div class="col-md-3 col-xs-3">
+                    <button class="btn btn-default number" ng-click="onClickClear()">C</button>
+                </div>
+                <div class="col-md-3 col-xs-3">
                     <button class="btn btn-default number" id="result" ng-click="onClickCalculate()">=</button>
                 </div>
             </div>

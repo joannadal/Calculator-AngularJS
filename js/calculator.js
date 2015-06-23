@@ -14,14 +14,20 @@ angular.module("Calculator", []).controller("CalculatorController",
 
         $scope.saveInMemory = function() {
             if ($scope.memory == null) {
+                if ($scope.displayValue == '') {
+                    $scope.displayValue = 0;
+                }
                 $scope.memory = parseFloat($scope.displayValue);
             }
         };
-        $scope.onClickClear = function() {
+        $scope.onClickReset = function() {
             $scope.operation = null;
             $scope.memory = null;
             $scope.displayValue = '';
             $scope.result = 0;
+        };
+        $scope.onClickClear = function() {
+            $scope.displayValue = '';
         };
         $scope.onClickSum = function() {
             $scope.saveInMemory();

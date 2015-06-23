@@ -13,3 +13,8 @@ body {
     margin-top: 15px;
     width: 100%;
 }
+
+.operation {
+    font-size: 20px;
+    font-family: SanFranciscoTextHeavy;
+}
