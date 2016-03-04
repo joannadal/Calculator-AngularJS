@@ -50,12 +50,8 @@ angular.module("Calculator", []).controller("CalculatorController",
             $scope.displayValue = '';
         };
         $scope.onClickChangeSign = function() {
-            if ($scope.displayValue > 0) {
-                $scope.displayValue = -$scope.displayValue;
-            }
-            else if ($scope.displayValue < 0) {
-                $scope.displayValue *= -1;
-            }
+            $scope.displayValue *= -1;
+            
             $scope.result = $scope.displayValue;
             $scope.memory = $scope.result;
             $scope.displayValue = $scope.result;
